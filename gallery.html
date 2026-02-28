@@ -132,7 +132,17 @@ body{
   <span style="--i:8; transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);">
     <img src="https://picsum.photos/400/400?8">
   </span>
+function createFall(){
+  const icons=["💌","🌸","💖","🌷"];
+  const item=document.createElement("div");
+  item.classList.add("fall");
+  item.innerHTML=icons[Math.floor(Math.random()*icons.length)];
+  item.style.left=Math.random()*100+"vw";
+  item.style.animationDuration=(3+Math.random()*5)+"s";
+  document.body.appendChild(item);
 
+  setTimeout(()=>{item.remove();},8000);
+}
   <!-- CHỮ XOAY CÙNG -->
   <div class="center-text">
     <h1>Love You 💖</h1>
@@ -144,3 +154,4 @@ body{
 </body>
 
 </html>
+
