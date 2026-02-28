@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery ❤️</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  overflow:hidden;
+  background: radial-gradient(circle at top,#ff4e8b,#1a001f);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  color:white;
+  font-family:sans-serif;
+}
+
+.slider{
+  position:relative;
+  width:300px;
+  height:300px;
+  transform-style:preserve-3d;
+  animation:rotate 25s linear infinite;
+}
+
+/* ẢNH */
+.slider span{
+  position:absolute;
+  width:100%;
+  height:100%;
+  transform-style:preserve-3d;
+}
+
+.slider span img{
+  width:50%;
+  height:50%;
+  object-fit:cover;
+  border-radius:20px;
+  filter: brightness(0.85);
+  box-shadow:0 0 12px rgba(255,255,255,0.15);
+  transition:0.5s;
+}
+
+.slider span img:hover{
+  transform:scale(1.05);
+  filter:brightness(1);
+}
+
+/* CHỮ BÊN TRONG */
+.center-text{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  pointer-events:none;
+}
+
+.center-text h1{
+  margin:0;
+  font-size:40px;
+  letter-spacing:3px;
+}
+
+.center-text h3{
+  margin-top:10px;
+  font-weight:normal;
+  font-size:18px;
+  width:260px;
+}
+
+@keyframes rotate{
+  0%{ transform:perspective(1000px) rotateY(0deg);}
+  100%{ transform:perspective(1000px) rotateY(360deg);}
+}
+</style>
+</head>
+<body>
+<h1>Mừng ngày 8/3 ❤️</h1>
+<div class="slider">
+
+  <!-- ẢNH XOAY -->
+  <span style="--i:1; transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);">
+    <img src="https://picsum.photos/400/400?1">
+  </span>
+  <span style="--i:2; transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);">
+    <img src="https://picsum.photos/400/400?2">
+  </span>
+  <span style="--i:3; transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);">
+    <img src="https://picsum.photos/400/400?3">
+  </span>
+  <span style="--i:4; transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);">
+    <img src="https://picsum.photos/400/400?4">
+  </span>
+  <span style="--i:5; transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);">
+    <img src="https://picsum.photos/400/400?5">
+  </span>
+  <span style="--i:6; transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);">
+    <img src="https://picsum.photos/400/400?6">
+  </span>
+  <span style="--i:7; transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);">
+    <img src="https://picsum.photos/400/400?7">
+  </span>
+  <span style="--i:8; transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);">
+    <img src="https://picsum.photos/400/400?8">
+  </span>
+
+  <!-- CHỮ XOAY CÙNG -->
+  <div class="center-text">
+    <h1>Love You 💖</h1>
+    <h3>Chúc bạn luôn xinh đẹp, hạnh phúc & tỏa sáng như những bông hoa!</h3>
+  </div>
+
+</div>
+
+</body>
+</html>
