@@ -18,7 +18,31 @@ body{
   color:white;
   font-family:sans-serif;
 }
+.fall{
+  position:absolute;
+  top:-50px;
+  font-size:24px;
+  animation:fall linear infinite;
+  opacity:0.8;
+}
 
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(360deg);
+  }
+}
+
+
+@keyframes heartRun{
+  0%{ left:-50px; }
+  100%{ left:110%; }
+}
+
+
+@keyframes catChase{
+  0%{ left:-150px; }
+  100%{ left:100%; }
+}
 .slider{
   position:relative;
   width:300px;
@@ -118,4 +142,5 @@ body{
 </div>
 
 </body>
+
 </html>
